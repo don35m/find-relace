@@ -15,4 +15,9 @@ describe('findReplace', function() {
     expect(findReplace("My friend is here. He is such a good friend.", "friend", "dog")).to.equal
     ("My dog is here. He is such a good dog.");
   });
+
+  it("Finds partial matches and returns no match", function() {
+    expect(findReplace("My friend is here. He is such a good friend.", "end", "dog")).to.equal
+    ("No Match");
+  });
 });

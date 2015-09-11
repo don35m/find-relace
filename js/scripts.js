@@ -1,6 +1,6 @@
 var findReplace = function(string, word, replace) {
   //use reg exp to find, replace
-  var result = string.replace(new RegExp(word, 'ig'), replace);
+  var result = string.replace(new RegExp('\\b' + word + '\\b', 'igm'), replace);
   //incase of no match
   if (result == string) {
     return "No Match";
