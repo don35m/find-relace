@@ -1,3 +1,8 @@
 var findReplace = function(string, word, replace) {
-  return string.replace(new RegExp(word, 'ig'), replace);
+  var result = string.replace(new RegExp(word, 'ig'), replace);
+  if (result == string) {
+    return "No Match";
+  } else {
+    return result;
+  }
 };
