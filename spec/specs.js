@@ -10,4 +10,9 @@ describe('findReplace', function() {
   it("Alerts user to no match", function() {
     expect(findReplace("My pet is here", "dog", "friend")).to.equal("No Match");
   });
+
+  it("Finds multiple instances of a word and replaces them all", function() {
+    expect(findReplace("My friend is here. He is such a good friend.", "friend", "dog")).to.equal
+    ("My dog is here. He is such a good dog.");
+  });
 });
